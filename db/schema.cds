@@ -1,3 +1,4 @@
+
 namespace german.dictionary;
 
 

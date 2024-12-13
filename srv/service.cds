@@ -1,5 +1,5 @@
-using {german.dictionary as dictionary} from '../db/schema';
-@path: '/odata/v4/dictionary'
-service MyService {
-    entity Words as projection on dictionary.Words;
+using { german.dictionary as my } from '../db/schema';
+service MyService @(path:'/dictionary') {
+entity Words as projection on my.Words;
+function getAllNouns() returns array of Words;
 }
